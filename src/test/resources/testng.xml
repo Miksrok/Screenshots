@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Products Management" verbose="1">
+
+
+    <test name="Create New Product [Chrome]">
+        <parameter name="browser" value="http://www.parishotelsweb.com/ru/"/>
+        <classes>
+            <class name="miksrok.testing.tests.TestSuite"/>
+        </classes>
+    </test>
+    <test name="s">
+        <parameter name="browser" value="http://www.parishotelsweb.com/search/?sort=Rating&amp;order=DESC&amp;part=1&amp;Name="/>
+        <classes>
+            <class name="miksrok.testing.tests.TestSuite"/>
+        </classes>
+    </test>
+    <test name="dds">
+        <parameter name="browser" value="http://bridgestreet-st-germain-hotel.parishotelsweb.com/ru/"/>
+        <classes>
+            <class name="miksrok.testing.tests.TestSuite"/>
+        </classes>
+    </test>
+
+    <!-- <test name="Create New Product [Firefox]" >
+         <parameter name="browser" value="firefox"/>
+         <classes>
+             <class name="miksrok.testing.tests.TestSuite"/>
+         </classes>
+     </test>-->
+
+    <!--Prepare test for firefox and IE browsers-->
+
+</suite>
