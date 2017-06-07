@@ -39,25 +39,29 @@ public abstract class BaseScript {
 
     @BeforeClass
     @Parameters("browser")
-    public void setUp(String name) {
-        //driver = new EventFiringWebDriver(getDriver(browser));
-        driver = new EventFiringWebDriver(getDriver(""));
+    public void setUp(String browser) {
+        driver = new EventFiringWebDriver(getDriver(browser));
         driver.register(new EventHandler());
 
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(45, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
         mainPage = new MainPage(driver);
-        mainPage.openMainPage(name);
+
 
     }
 
     @AfterClass
     public void tearDown() {
+        for(int i = 0; i<3; i++){
+
+        }
+
         if (driver != null) {
             driver.quit();
         }
+
     }
 
 }
